@@ -1,0 +1,27 @@
+.bookItem {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+
+.itemActions li button {
+  padding: 5px;
+}
+
+.itemActions li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.itemCategory {
+  font-weight: bolder;
+}
+
+.itemTitle {
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.itemAuthor {
+  padding: 5px 0;
+}

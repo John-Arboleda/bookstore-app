@@ -2,11 +2,12 @@
 
 # Math Magicians
 
-> "Math Magicians" is a website for Math fanatics. Its built-in calculator will help you to perform basic arithmetic operations: addition, subtraction, multiplication, and division. Become a wise math magician reading our random math-related quote.
+> "Bookstore" is a website made to facilitate the management of your book collection. Users can log, edit and delete items from the library. Bookstore will keep track of your progress in each book with the chapter where the book was closed last time. 
 
 ## Built With
 
-- ReactJS
+- React.js
+- Redux
 - HTML
 - JavaScript
 
@@ -20,7 +21,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- Clone this repository to a directory you want in your computer with this command: ```git@github.com:John-Arboleda/math_magicians.git```
+- Clone this repository to a directory you want in your computer with this command: ```git@github.com:John-Arboleda/bookstore_app.git```
 
 ### Install
 

@@ -3,7 +3,7 @@ import React from 'react';
 function Categories() {
   return (
     <div>
-      <h1>Under construction</h1>
+      <button>Check status</button>
     </div>
   );
 }

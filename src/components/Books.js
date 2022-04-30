@@ -5,7 +5,9 @@ import NewBook from './NewBook';
 function Books() {
   return (
     <div>
-      <BookItem />
+      <ul>
+        <li><BookItem /></li>
+      </ul>
       <NewBook />
     </div>
   );

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import nextId from 'react-id-generator';
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
 import { addBookAsync } from '../redux/books/books';
 
@@ -25,7 +25,7 @@ function InputBook() {
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      item_id: nextId(),
+      item_id: uuidv4(),
       title,
       author,
       category,

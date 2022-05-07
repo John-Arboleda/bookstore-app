@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import BookItem from './BookItem';
-import NewBook from './NewBook';
+import InputBook from './InputBook';
 
 function Books() {
   const books = useSelector((state) => state.booksReducer);
@@ -9,11 +9,11 @@ function Books() {
     <div>
       <ul>
         {books.map((book) => (
-          <li><BookItem key={book.id} book={book} /></li>
+          <li><BookItem key={book.item_id} book={book} /></li>
         ))}
 
       </ul>
-      <NewBook />
+      <InputBook />
     </div>
   );
 }

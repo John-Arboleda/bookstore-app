@@ -1,4 +1,4 @@
-import { addBookAPI, getBooksAPI } from '../../API/book';
+import { addBookAPI, getBooksAPI, removeBookAPI } from '../../API/book';
 
 const ADD_BOOK = 'bookstore_app/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore_app/books/REMOVE_BOOK';
@@ -33,6 +33,11 @@ export const removeBook = (id) => ({
   type: REMOVE_BOOK,
   id,
 });
+
+export const removeBookAsync = (id) => async (dispatch) => {
+  await removeBookAPI(id);
+  dispatch(removeBook(id));
+};
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {

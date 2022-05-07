@@ -2,7 +2,7 @@ const appURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/books
 
 export const getBooksAPI = async () => {
   const data = await fetch(`${appURL}/books`)
-    .then((responce) => responce.json());
+    .then((response) => response.json());
   return data;
 };
 
@@ -14,4 +14,10 @@ export const addBookAPI = async (book) => {
   });
   const data = await response.text();
   return data;
+};
+
+export const removeBookAPI = async (id) => {
+  await fetch(`${appURL}/books/${id}`, {
+    method: 'DELETE',
+  }).then((response) => response.text());
 };

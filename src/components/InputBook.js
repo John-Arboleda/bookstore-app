@@ -1,13 +1,12 @@
-// import useDispatch hook
 import { useDispatch } from 'react-redux';
-import nextId from 'react-id-generator';
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
-// import your Action Creators
-import { addBook } from '../redux/books/books';
+import { addBookAsync } from '../redux/books/books';
 
-function NewBook() {
+function InputBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('Action');
 
   const dispatch = useDispatch();
 
@@ -19,17 +18,21 @@ function NewBook() {
     setTitle(e.target.value);
   };
 
+  const CategoryHandler = (e) => {
+    setCategory(e.target.value);
+  };
+
   const submitBookToStore = (e) => {
     e.preventDefault();
     const newBook = {
-      id: nextId(),
+      item_id: uuidv4(),
       title,
       author,
+      category,
     };
-
-    // dispatch an action and pass it the newBook object (your action's payload)
-    dispatch(addBook(newBook));
+    dispatch(addBookAsync(newBook));
   };
+
   return (
     <form>
       <h2>ADD NEW BOOK</h2>
@@ -39,14 +42,13 @@ function NewBook() {
         onChange={AuthorHandler}
         placeholder="Author"
       />
-
       <input
         type="text"
         value={title}
         onChange={TitleHandler}
         placeholder="Title"
       />
-      <select>
+      <select value={category} onChange={CategoryHandler}>
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>
         <option value="Economy">Economy</option>
@@ -56,4 +58,4 @@ function NewBook() {
   );
 }
 
-export default NewBook;
+export default InputBook;

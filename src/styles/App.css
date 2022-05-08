@@ -1,3 +1,5 @@
+/* Reset */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,4 +45,22 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* App.js */
+
+:root {
+  --light-grey: #f5f6fa;
+}
+
+body {
+  background-color: var(--light-grey);
+  margin: 3rem;
+}
+
+.body {
+  background-color: #fafafa;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  padding-bottom: 4rem;
 }

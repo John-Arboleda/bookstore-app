@@ -5,6 +5,7 @@ import Categories from './components/Categories';
 import Books from './components/Books';
 import Navbar from './components/Navbar';
 import { getBooksAsync } from './redux/books/books';
+import './styles/App.css';
 
 function App() {
   const dispatch = useDispatch();

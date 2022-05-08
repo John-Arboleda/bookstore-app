@@ -48,12 +48,12 @@
   cursor: pointer;
 }
 
-.itemCategory{
+.itemCategory {
   width: 7rem;
   height: 1.125rem;
   margin: 0 4rem 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   font-weight: bold;
   font-stretch: normal;
